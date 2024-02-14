@@ -10,7 +10,7 @@ export class ContentController {
     root(){
 
     }
-    //contentDto , entity 만들기, 
+    //contentDto+pipes , entity 날짜수정, 
     @Post()
     @UsePipes(ValidationPipe)
     createContent(@Body() CreateContentDto: CreateContentDto): Promise<Content> {
