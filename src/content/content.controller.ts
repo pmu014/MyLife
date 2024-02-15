@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Post, Render, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ContentService } from './content.service';
-
+import { CreateContentDto } from './dto/create-content.dto';
+import { Content } from './content.entity';
 @Controller('content')
 export class ContentController {
     constructor(private contentService: ContentService) {}
