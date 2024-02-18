@@ -6,4 +6,7 @@ export class CreateContentDto {
     
     @IsNotEmpty()
     release: string; 
+
+    @IsNotEmpty()
+    division: string; 
 }

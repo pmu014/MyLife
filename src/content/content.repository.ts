@@ -9,17 +9,17 @@ export class ContentRepository extends Repository<Content> {
         super(Content, dataSource.createEntityManager());
     }
 
-    async createContent(CreateContentDto: CreateContentDto):Promise<Content>{
-        //들어갈거 쓰기
-        // const {title, description} = createBoardDto;
+    async createContent(createContentDto: CreateContentDto):Promise<Content>{
 
-        // const board = this.create({
-        //     title,
-        //     description,
-        //     status: BoardStatus.PUBLIC
-        // });
+        const {title, release, division} = createContentDto;
+        //division 파이프수정필요
+        const contentCreate = this.create({
+            title,
+            release,
+            division
+        });
     
-        // await this.save(board);
-        // return board;
+        await this.save(contentCreate);
+        return contentCreate;
     }
 }

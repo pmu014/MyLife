@@ -6,11 +6,12 @@ export class Content extends BaseEntity {
     id:number;
 
     @Column()
-    division: ContentDivision;
-
-    @Column()
     title: string;
     
     @Column()
     release: string;
+
+    @Column()
+    division: ContentDivision;
+
 }
