@@ -12,7 +12,6 @@ export class ContentRepository extends Repository<Content> {
     async createContent(createContentDto: CreateContentDto):Promise<Content>{
 
         const {title, release, division} = createContentDto;
-        //division 파이프수정필요
         const contentCreate = this.create({
             title,
             release,

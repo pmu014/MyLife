@@ -1,4 +1,5 @@
 import { IsNotEmpty } from "class-validator";
+import { ContentDivision } from "../content-division.enum";
 
 export class CreateContentDto {
     @IsNotEmpty()
@@ -8,5 +9,5 @@ export class CreateContentDto {
     release: string; 
 
     @IsNotEmpty()
-    division: string; 
+    division: ContentDivision; 
 }
