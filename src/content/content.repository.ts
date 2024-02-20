@@ -17,7 +17,7 @@ export class ContentRepository extends Repository<Content> {
             release,
             division
         });
-    
+    //아래처럼하면 리턴값어떻게 되는지 체크
         await this.save(contentCreate);
         return contentCreate;
     }
