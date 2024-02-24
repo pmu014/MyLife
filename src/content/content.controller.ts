@@ -15,9 +15,9 @@ export class ContentController {
         return {message: "hello"}
     }
     //파이프내용 수정
-    @Get('/:div')
-    getContent(@Param('div', CreateContentValidationPipe) div: ContentDivision ){
-
+    @Get('/:division')
+    getContent(@Param('division', CreateContentValidationPipe) division: ContentDivision ){
+        return this.contentService.getContent(division)
     }
     //contentDto+pipes , entity 날짜수정, 
     @Post()
