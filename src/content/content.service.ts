@@ -14,13 +14,13 @@ constructor(
         return this.contentRepository.createContent(CreateContentDto)
     }
 
-    async getContent(division: ContentDivision): Promise<Content>{
-        const found = await this.contentRepository.find({
+    async getContent(division: ContentDivision): Promise<Content[]>{
+        const found = await this.contentRepository.findBy({
             division
         });
 
-        if(!found) {
-            throw new NotFoundException(`Can't find Board with id ${division}`);
+        if(!found || found.length === 0) {
+            throw new NotFoundException(`Can't find Board with ${division}`);
         }
 
         return found;
