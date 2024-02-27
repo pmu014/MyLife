@@ -21,4 +21,16 @@ export class ContentRepository extends Repository<Content> {
         await this.save(contentCreate);
         return contentCreate;
     }
+
+    async patchContent(createContentDto: CreateContentDto):Promise<Content>{
+
+        const {title, release, division} = createContentDto;
+        const contentPatch = this.update({
+            title,
+            release,
+            division
+        });
+        await this.save(contentPatch);
+        return contentPatch;
+    }
 }

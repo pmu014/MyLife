@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Render, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post, Render, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ContentService } from './content.service';
 import { CreateContentDto } from './dto/create-content.dto';
 import { Content } from './content.entity';
@@ -26,5 +26,10 @@ export class ContentController {
         return this.contentService.createContent(CreateContentDto)
     }
 
+    @Patch()
+    @UsePipes(ValidationPipe)
+    patchContent(@Body() CreateContentDto: CreateContentDto): Promise<Content> {
+        return this.contentService.patchContent(CreateContentDto)
+    }
 
 }

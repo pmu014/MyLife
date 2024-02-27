@@ -25,4 +25,8 @@ constructor(
 
         return found;
     }
+
+    patchContent(CreateContentDto: CreateContentDto): Promise<Content>{
+        return this.contentRepository.patchContent(CreateContentDto)
+    }
 }
