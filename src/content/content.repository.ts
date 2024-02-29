@@ -22,15 +22,15 @@ export class ContentRepository extends Repository<Content> {
         return contentCreate;
     }
 
-    async patchContent(createContentDto: CreateContentDto):Promise<Content>{
+    // async patchContent(createContentDto: CreateContentDto):Promise<Content>{
 
-        const {title, release, division} = createContentDto;
-        const contentPatch = this.update({
-            title,
-            release,
-            division
-        });
-        await this.save(contentPatch);
-        return contentPatch;
-    }
+    //     const {title, release, division} = createContentDto;
+    //     const contentPatch = this.update({
+    //         title,
+    //         release,
+    //         division
+    //     });
+    //     await this.save(contentPatch);
+    //     return contentPatch;
+    // }
 }

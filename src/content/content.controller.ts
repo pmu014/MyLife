@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Patch, Post, Render, UsePipes, Validation
 import { ContentService } from './content.service';
 import { CreateContentDto } from './dto/create-content.dto';
 import { Content } from './content.entity';
-import { CreateContentValidationPipe } from './pipes/content-status-validation.pipe';
+// import { CreateContentValidationPipe } from './pipes/content-status-validation.pipe';
 import { ContentDivision } from './content-division.enum';
 
 @Controller('content')
@@ -16,7 +16,7 @@ export class ContentController {
     }
     //파이프내용 수정
     @Get('/:division')
-    getContent(@Param('division', CreateContentValidationPipe) division: ContentDivision ){
+    getContent(@Param('division') division: ContentDivision ){
         return this.contentService.getContent(division)
     }
     //contentDto+pipes , entity 날짜수정, 
@@ -26,10 +26,10 @@ export class ContentController {
         return this.contentService.createContent(CreateContentDto)
     }
 
-    @Patch()
-    @UsePipes(ValidationPipe)
-    patchContent(@Body() CreateContentDto: CreateContentDto): Promise<Content> {
-        return this.contentService.patchContent(CreateContentDto)
-    }
+    // @Patch()
+    // @UsePipes(ValidationPipe)
+    // patchContent(@Body() CreateContentDto: CreateContentDto): Promise<Content> {
+    //     return this.contentService.patchContent(CreateContentDto)
+    // }
 
 }
