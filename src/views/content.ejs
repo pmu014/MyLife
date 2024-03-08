@@ -3,18 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>content</title>
 </head>
+<script>
+    function cardSave(){
+        const title = document.getElementById('inputTitle').value;
+        const content = document.getElementById('inputContent').value;
+        const division = document.getElementById('inputDivision').value;
+        let Data = new FormData();
+        Data.append('title', title)
+        Data.append('content', content)
+        Data.append('division', division)
+        if (title.trim() == ""){
+            alert("내용이 없습니다.")
+        }else{
+            axios({
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+                method: 'post',
+                url: '/content',
+                data: Data,
+                
+            })
+                .then((response) => {
+                    alert(response.data.msg)
+                    location.reload();
+                })
+        }
+    }
+</script>
 <body>
     <div>
-        <p>contentGet</p>
+        <p>contentPost</p>
+        <button onclick="post()">dd</button>
+        <div class="mb-3">
+            <input type="text" name="title" class="form-control" id="inputTitle" maxlength="13">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="title" class="form-control" id="inputTitle" maxlength="13">
+        </div>
         
     </div>
     <div>
-        <p>contentPost</p>
+        <p>contentGet</p>
     </div>
     <div>
         <p>contentPatch</p>
     </div>
 </body>
 </html>
+
