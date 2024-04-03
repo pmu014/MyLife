@@ -8,7 +8,7 @@ import { ContentDivision } from './content-division.enum';
 @Controller('content')
 export class ContentController {
     constructor(private contentService: ContentService) {}
-
+    //루트 메인으로 뺴줘야함
     @Get()
     @Render('content')
     root(){
