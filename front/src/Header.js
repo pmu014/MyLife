@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import './App.css';
-
 
 const HeaderSection = styled.div`
   display: grid;
@@ -27,8 +25,8 @@ const HeaderBox = styled.div`
 `;
 
 const TitleBox = styled.div`
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
   border: 1px solid;
   border-radius: 25% 10%;;
   margin: 20px;
@@ -43,11 +41,11 @@ const TitleBox = styled.div`
 `;
 
 
-function App() {
+function Header() {
   return (
     //타이틀별 페이지 이동 필요
     <HeaderSection>
-      <empty></empty>
+      <empty/>
       <HeaderContainer>
         <Title>Minuk's Life</Title>
         <HeaderBox>
@@ -57,10 +55,10 @@ function App() {
           <TitleBox>Diary</TitleBox>
         </HeaderBox>
       </HeaderContainer>
-      <empty></empty>
+      <empty/>
     </HeaderSection>
 
   );
 }
 
-export default App;
+export default Header;
