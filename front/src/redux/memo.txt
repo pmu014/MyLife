@@ -1,0 +1,4 @@
+redux  - 리덕스관련코드 모두몰아넣음
+config - 리덕스 설정관련 파일전부
+cofigStore - 중앙 state관리소 -> 설정코드.js
+modules - states그룹 투두리스트 투두.js
