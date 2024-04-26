@@ -40,6 +40,7 @@ const TitleBox = styled.div`
   }
 `;
 
+//리액트 라우트 돔으로 아래 페이지들 라우팅하기.
 
 function Header() {
   return (
