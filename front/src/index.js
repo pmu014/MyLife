@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Header from './Header';
-import Content from './Content';
+import Main from './Main';
+// import Header from './Header';
+// import Content from './Content';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <Content />
+    <Main/>
+    {/* <Header />
+    <Content /> */}
   </React.StrictMode>
 );
 

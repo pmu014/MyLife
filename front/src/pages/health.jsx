@@ -1,9 +1,9 @@
 import React from 'react'
 
-function health() {
+function Health() {
   return (
     <div>health</div>
   )
 }
 
-export default health
+export default Health

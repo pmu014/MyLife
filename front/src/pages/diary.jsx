@@ -1,9 +1,11 @@
 import React from 'react'
 
-function diary() {
+function Diary
+() {
   return (
-    <div>diary</div>
+    <div>Diar
+    </div>
   )
 }
 
-export default diary
+export default Diary

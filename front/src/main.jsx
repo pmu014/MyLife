@@ -2,7 +2,7 @@ import React from 'react'
 import Router from './shared/Router';
 
 
-function main() {
+function Main() {
   return (
     <Router>
 
@@ -10,4 +10,4 @@ function main() {
   )
 }
 
-export default main
+export default Main
