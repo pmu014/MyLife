@@ -10,7 +10,7 @@ import Diary from "../pages/diary";
 const Router = () => {
     return (
         <BrowserRouter>
-            <Header/>
+            <Header />
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="content" element={<Content/>}/>

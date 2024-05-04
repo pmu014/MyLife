@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from './Main';
+// import Router from './shared/Router';
+import App from './App';
 // import Header from './Header';
 // import Content from './Content';
 import reportWebVitals from './reportWebVitals';
+// import Home from './pages/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Main/>
+    <App/>
     {/* <Header />
     <Content /> */}
   </React.StrictMode>

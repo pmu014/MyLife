@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 const HeaderSection = styled.div`
   display: grid;
@@ -43,6 +44,7 @@ const TitleBox = styled.div`
 //리액트 라우트 돔으로 아래 페이지들 라우팅하기.
 
 function Header() {
+  const navigate = useNavigate();
   return (
     //타이틀별 페이지 이동 필요
     <HeaderSection>
@@ -50,10 +52,18 @@ function Header() {
       <HeaderContainer>
         <Title>Minuk's Life</Title>
         <HeaderBox>
-          <TitleBox>Content</TitleBox>
-          <TitleBox>Sports</TitleBox>
-          <TitleBox>Health</TitleBox>
-          <TitleBox>Diary</TitleBox>
+          <TitleBox onClick={()=> {
+            navigate("/content")
+            }}>Content</TitleBox>
+          <TitleBox onClick={()=> {
+            navigate("/sports")
+            }}>Sports</TitleBox>
+          <TitleBox onClick={()=> {
+            navigate("/health")
+            }}>Health</TitleBox>
+          <TitleBox onClick={()=> {
+            navigate("/diary")
+            }}>Diary</TitleBox>
         </HeaderBox>
       </HeaderContainer>
       <empty/>
