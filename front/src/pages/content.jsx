@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 
 
 const ContentSection = styled.div`
@@ -30,14 +31,23 @@ const ContentBoxContainer = styled.div`
   justify-content: center;
 `;
 function Content() {
+  const navigate = useNavigate();
   return (
     <ContentSection>
         <empty/>
         <ContentBoxContainer>
-            <ContentBox>Movie</ContentBox>
-            <ContentBox>Drama</ContentBox>
-            <ContentBox>Animation</ContentBox>
-            <ContentBox>Others</ContentBox>
+            <ContentBox onClick={()=> {
+            navigate("/content/movie")
+            }}>Movie</ContentBox>
+            <ContentBox onClick={()=> {
+            navigate("/content/drama")
+            }}>Drama</ContentBox>
+            <ContentBox onClick={()=> {
+            navigate("/content/anime")
+            }}>Animation</ContentBox>
+            <ContentBox onClick={()=> {
+            navigate("/content/others")
+            }}>Others</ContentBox>
         </ContentBoxContainer>
         <empty/>
     </ContentSection>
